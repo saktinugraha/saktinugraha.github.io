@@ -16,6 +16,55 @@
         $(this).remove();
       });
     }
+
+		const contentMap = [
+			{
+				page: "iterm2",
+				title: "Iterm2 Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/iterm2.md",
+				tags: ["Tools", "Terminal", "MacOS"],
+			},
+			{
+				page: "bash",
+				title: "Bash Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/bash.md",
+				tags: ["Terminal", "Shell", "GNU"],
+			},
+			{
+				page: "js",
+				title: "Javascript Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/js.md",
+				tags: ["Javascript", "EcmaScript"],
+			},
+		]
+
+		function getPage() {
+			return (document.URL.split('?page=').length > 1) ? document.URL.split('?page=')[1] : null;
+		}
+
+		function getCurrentPage() {
+			return contentMap.filter(o => o.page === getPage());
+		}
+
+		let currentPage = getCurrentPage()
+		if (currentPage) {
+			fetch(currentPage[0].source)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error(`HTTP error: ${response.status}`);
+				}
+				return response.text();
+			})
+			.then((md) => {
+				document.getElementsByClassName("article-title")[0].innerHTML = currentPage[0].title;
+				document.getElementsByClassName("article-content")[0].innerHTML = marked.parse(md);
+				document.querySelector("#tags-list").insertAdjacentHTML(
+					"beforeend",
+					currentPage[0].tags.reduce((acc, tag) => acc += `<li><a href="#">${tag}</a></li>`, "")
+				);
+			})
+			.catch((err) => console.error(`Fetch problem: ${err.message}`));
+		}
   });
 
   // Back to top button
