@@ -34,7 +34,13 @@
 				page: "js",
 				title: "Javascript Daily Cheatsheet",
 				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/js.md",
-				tags: ["Javascript", "EcmaScript"],
+				tags: ["Javascript", "EcmaScript", "Fullstack"],
+			},
+			{
+				page: "go",
+				title: "Go Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/go.md",
+				tags: ["Go", "Golang", "Backend"],
 			},
 		]
 
