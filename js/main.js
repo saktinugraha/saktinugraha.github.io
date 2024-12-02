@@ -48,6 +48,12 @@
 				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/docker.md",
 				tags: ["Docker", "Container", "Service"],
 			},
+			{
+				page: "kubernetes",
+				title: "Kubernetes Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/kubernetes.md",
+				tags: ["Kubernetes", "Container", "Orchestration"],
+			},
 		]
 
 		function getPage() {
