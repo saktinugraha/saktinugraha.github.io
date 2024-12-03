@@ -54,6 +54,12 @@
 				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/kubernetes.md",
 				tags: ["Kubernetes", "Container", "Orchestration"],
 			},
+			{
+				page: "AWS CLI",
+				title: "AWS CLI Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/kubernetes.md",
+				tags: ["AWS", "CLI", "Cloud Infrastructure"],
+			},
 		]
 
 		function getPage() {
