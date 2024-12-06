@@ -57,8 +57,14 @@
 			{
 				page: "AWS CLI",
 				title: "AWS CLI Daily Cheatsheet",
-				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/kubernetes.md",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/aws.md",
 				tags: ["AWS", "CLI", "Cloud Infrastructure"],
+			},
+			{
+				page: "Ubuntu Shell",
+				title: "Ubuntu Daily Cheatsheet",
+				source: "https://raw.githubusercontent.com/saktinugraha/awesome-daily-cheatsheets/refs/heads/master/ubuntu.md",
+				tags: ["Ubuntu", "Linux", "Operating System"],
 			},
 		]
 
